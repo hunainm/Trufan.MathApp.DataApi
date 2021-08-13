@@ -11,7 +11,7 @@ COPY package.json /app
 RUN npm install
 
 # Copy other project files to our container
-COPY . .
+COPY ./src ./src
 
 # Run a startup command when our container starts
 CMD ["npm", "start"]
