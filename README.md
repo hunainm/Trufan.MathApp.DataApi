@@ -9,6 +9,9 @@ Run `cd src` -> `npm start` to start the application at http://localhost:5000 by
 If you have docker installed locally then run the following command instead at the root of project 
 `docker build . -t trufan-data-api` -> `docker run -p 5000:5000 -d trufan-data-api`
 
+## HOW TO TEST
+Run `npm run test` to run unit and integration tests.
+
 ## APIDOCS
 To see apidocs navigate to http://localhost:5000/api-docs
 
