@@ -1,6 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const primenessRouter = require('./routes/primeness.route');
+const apiDocs = require('./routes/apidocs.route')
 const port = process.env.NODE_HOST_PORT || 5000;
 const cors = require("cors");
 
@@ -11,6 +12,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use('/', apiDocs);
 app.use('/primeness', primenessRouter);
 
 app.listen(port, () => {
